@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastball Recap</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'ball/css/styles.css' %}">
+    <script defer src="{% static 'ball/js/script.js' %}"></script>
+</head>
+<body>
+    <header>
+        <h1>Fastball Recap</h1>
+    </header>
+    <main>
+        <div class="container">
+            <section id="preferences">
+                <h2>Select Your Preferences</h2>
+                <label for="team">Favorite Team:</label>
+                <select id="team">
+                    <option value="dodgers">Los Angeles Dodgers</option>
+                    <option value="yankees">New York Yankees</option>
+                    <option value="redsox">Boston Red Sox</option>
+                </select>
+                <label for="player">Favorite Player:</label>
+                <input type="text" id="player" placeholder="Enter player name">
+                <label for="highlight-type">Highlight Type:</label>
+                <select id="highlight-type">
+                    <option value="home_runs">Home Runs</option>
+                    <option value="strikeouts">Strikeouts</option>
+                    <option value="amazing_catches">Amazing Catches</option>
+                </select>
+                <button id="save-preferences">Save Preferences</button>
+            </section>
+            <section id="image-rotation">
+                <h2>MLB Moments</h2>
+                <div id="rotating-images">
+                    <img src="{% static 'ball/images/image1.jpeg' %}" alt="MLB Moment 1" class="active">
+                    <img src="{% static 'ball/images/image2.jpeg' %}" alt="MLB Moment 2">
+                    <img src="{% static 'ball/images/image3.jpeg' %}" alt="MLB Moment 3">
+                </div>
+            </section>
+        </div>
+        <section id="highlights">
+            <h2>Your Personalized Highlights</h2>
+            <div id="highlight-container">
+                <!-- Highlights will be dynamically inserted here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Fastball Recap</p>
+    </footer>
+</body>
+</html>

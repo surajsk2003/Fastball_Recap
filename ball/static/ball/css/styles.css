@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+#preferences {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+select, input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #004494;
+}
+
+#highlights {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Container for side-by-side layout */
+.container {
+    display: flex;
+    gap: 20px; /* Space between the two sections */
+    margin-bottom: 20px; /* Space between container and highlights section */
+}
+
+/* Preferences section */
+#preferences {
+    flex: 1; /* Takes up 1 part of the available space */
+    max-width: 400px; /* Optional: Limit the width of the preferences section */
+}
+
+/* Image rotation section */
+#image-rotation {
+    flex: 1; /* Takes up 1 part of the available space */
+}
+
+/* Rotating images styling */
+#rotating-images {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust as needed */
+    overflow: hidden;
+}
+
+#rotating-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#rotating-images img.active {
+    opacity: 1;
+}
